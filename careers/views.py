@@ -11,6 +11,14 @@ class Posts(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+    def post(self, request):
+        data = request.data
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status = 200)
+        return Response(serializer.errors, status=400)
+
     def get(self, request, pk=None):
         if pk:
             try:
