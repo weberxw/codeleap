@@ -32,7 +32,7 @@ For demonstration purposes all user authentication and specific permissions veri
     {
         "title": "New Post",
         "username": "John Doe",
-        "content": "New content for a post",
+        "content": "New content for a post"
     }
 
 * **PATCH https://codeleap.herokuapp.com/careers/{ID}/** - Update an existent Post by ID
@@ -41,7 +41,7 @@ For demonstration purposes all user authentication and specific permissions veri
 
     {
         "title": "Edited Post",
-        "content": "This content has been edited",
+        "content": "This content has been edited"
     }
 
 * **DELETE https://codeleap.herokuapp.com/careers/{ID}/** - Delete an existent Post by ID
